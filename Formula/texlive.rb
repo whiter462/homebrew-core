@@ -9,7 +9,7 @@ class Texlive < Formula
   bottle do
     sha256 "f529174ec1714d92a515604133c6bcd9b75224d995f013e84203a0a0e73a47b6" => :x86_64_linux # glibc 2.19
   end
-  
+
   option "with-full", "install everything"
   option "with-medium", "install small + more packages and languages"
   option "with-small", "install basic + xetex, metapost, a few languages [default]"
@@ -18,6 +18,7 @@ class Texlive < Formula
 
   depends_on :perl => ["5.14", :build] unless OS.mac?
   depends_on "fontconfig"
+  depends_on "wget" => :build
 
   def install
     scheme = %w[full medium small basic minimal].find do |x|

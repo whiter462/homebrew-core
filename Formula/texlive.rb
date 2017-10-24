@@ -20,7 +20,6 @@ class Texlive < Formula
   depends_on "fontconfig"
   depends_on "wget" => :build
   depends_on "xorg"
-  #  depends_on "ice"
 
   def install
     scheme = %w[full medium small basic minimal].find do |x|

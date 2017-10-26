@@ -16,7 +16,7 @@ class Texlive < Formula
   option "with-basic", "install plain and latex"
   option "with-minimal", "install plain only"
 
-  depends_on :perl => ["5.14", :build] 　# comment out # unless OS.mac?
+  depends_on :perl => ["5.14", :build] 
   depends_on "fontconfig"
   depends_on "wget" => :build
   depends_on "xorg"
@@ -30,7 +30,7 @@ class Texlive < Formula
     ENV["TEXLIVE_INSTALL_PREFIX"] = prefix
     system "./install-tl", "-scheme", scheme, "-portable", "-profile", "/dev/null"
 
-  #  binarch = bin/"x86_64-linux"
+    binarch = bin/x86_64-linux
     man1.install Dir[binarch/"man/man1/*"]
     man5.install Dir[binarch/"man/man5/*"]
     bin.install_symlink Dir[binarch/"*"]

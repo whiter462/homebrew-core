@@ -16,7 +16,7 @@ class Texlive < Formula
   option "with-basic", "install plain and latex"
   option "with-minimal", "install plain only"
 
-  depends_on :perl => ["5.14", :build] 
+  depends_on :perl => ["5.14", :build]
   depends_on "fontconfig"
   depends_on "wget" => :build
   depends_on "xorg"

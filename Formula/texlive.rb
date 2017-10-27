@@ -19,7 +19,15 @@ class Texlive < Formula
   depends_on :perl => ["5.14", :build]
   depends_on "fontconfig"
   depends_on "wget" => :build
-  depends_on "xorg"
+  # depends_on "xorg"
+  depends_on "linuxbrew/xorg/libice"
+  depends_on "linuxbrew/xorg/libsm"
+  depends_on "linuxbrew/xorg/libx11"
+  depends_on "linuxbrew/xorg/libxaw"
+  depends_on "linuxbrew/xorg/libxext"
+  depends_on "linuxbrew/xorg/libxmu"
+  depends_on "linuxbrew/xorg/libxpm"
+  depends_on "linuxbrew/xorg/libxt"
 
   def install
     scheme = %w[full medium small basic minimal].find do |x|

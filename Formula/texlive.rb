@@ -19,7 +19,6 @@ class Texlive < Formula
   depends_on :perl => ["5.14", :build]
   depends_on "fontconfig"
   depends_on "wget" => :build
-  depends_on "linuxbrew/xorg/xorg"
   depends_on "linuxbrew/xorg/libice"
   depends_on "linuxbrew/xorg/libsm"
   depends_on "linuxbrew/xorg/libx11"

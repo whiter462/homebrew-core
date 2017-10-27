@@ -37,7 +37,7 @@ class Texlive < Formula
     ENV["TEXLIVE_INSTALL_PREFIX"] = prefix
     system "./install-tl", "-scheme", scheme, "-portable", "-profile", "/dev/null"
 
-    binarch = bin/x86_64-linux
+    binarch = bin/"x86_64-linux"
     man1.install Dir[binarch/"man/man1/*"]
     man5.install Dir[binarch/"man/man5/*"]
     bin.install_symlink Dir[binarch/"*"]

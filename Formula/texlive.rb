@@ -40,7 +40,7 @@ class Texlive < Formula
     binarch = bin/"x86_64-linux"
     man1.install Dir[binarch/"man/man1/*"]
     man5.install Dir[binarch/"man/man5/*"]
-    bin.install Dir[bin/"x86_64-linux/*"]
+    bin.install Dir[binarch/"*"]
   end
 
   test do
